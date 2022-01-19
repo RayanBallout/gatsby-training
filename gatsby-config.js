@@ -18,23 +18,13 @@ module.exports = {
       name: "john",
       age: 32
     },
-    simpleData: ['item 1', 'item 2'],
-    complexData: [
-      {
-        name: "john",
-        age: 32
-      },
-      {
-        name: "susan",
-        age: 21
-      },
-    ]
   },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,6 +39,6 @@ module.exports = {
         // Learn about environment variables: https://gatsby.dev/env-vars
         accessToken: process.env.CONTENFUL_API_KEY,
       },
-    }
+    },
   ],
 }
